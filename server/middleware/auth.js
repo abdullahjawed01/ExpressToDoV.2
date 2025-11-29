@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken"
 import dotenv from "dotenv"
 dotenv.config()
 
-async function encryptData(userData,mySecretKey){
+async function encryptData(userData,mySecretKey, time){
     try {
         // it accepts only objects
 
@@ -14,7 +14,7 @@ async function encryptData(userData,mySecretKey){
         // time => in seconds
 
         let token = jwt.sign(userData, mySecretKey,{
-            expiresIn: "1D"
+            expiresIn: time
         })// string means milliseconds and if nothing its seconds
 
         console.log(token);

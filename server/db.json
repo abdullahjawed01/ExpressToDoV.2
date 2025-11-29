@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "e3887ff3-c47c-462d-82d3-09a19743f4c2",
+    "name": "kamran",
+    "age": "22",
+    "email": "itzkamranfr@gmail.com",
+    "phone": "91100000000",
+    "password": "$2b$10$KcIDRZt./VsDANrolLxEnueiWX2TS8JvfnW5iqCIxi5Hu/TtBMBF6",
+    "isverified": true,
+    "task": [],
+    "accountCreatedAt": "2025-11-29T12:17:01.328Z",
+    "isFrozen": false,
+    "cnt": 0
+  }
+]

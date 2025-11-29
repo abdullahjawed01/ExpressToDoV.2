@@ -1,6 +1,7 @@
 import express from "express"
 
 import { readDB, writeDB, deleteDB } from "../../utils/helper.js"
+import bcrypt from "bcrypt"
 
 import { v4 as uuid } from "uuid"
 const router = express.Router()
@@ -165,7 +166,7 @@ router.put("/updateuser/:id", async (req, res) => {
         if (name !== undefined) user.name = name
         if (email !== undefined) user.email = email
         if (age !== undefined) user.age = age
-        if (password !== undefined) user.password = password
+        if (password !== undefined) user.password = await bcrypt.hash(password, 10);
         if (phone !== undefined) user.phone = phone
 
         await writeDB(DB)
